@@ -1,0 +1,12 @@
+ [<a href="/mydata/">戻る</a>]
+<p><%= msg %></p>
+<form action="/mydata/find" method="post">
+        <input type="text" name="fstr" value="<%= fstr %>">
+        <input type="submit">
+</form>
+<hr>
+<ol>
+<% for(var i = 0;i < datas.length;i++){ %>
+<li><%= datas[i].name + '[' + datas[i].mail + ']' + '(' + datas[i].age + ')' %>
+<% } %>
+</ol>

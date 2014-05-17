@@ -1,0 +1,24 @@
+ [<a href="/mydata/">戻る</a>]
+<p><%= msg %></p>
+<form action="/mydata/update" method="post">
+        <input type="hidden" name="id" value="<%= mydata.id %>">
+        <table>
+                <tr>
+                        <td>Name:</td>
+                        <td><input type="text" name="name" value="<%= mydata.name %>"></td>
+                </tr>
+                <tr>
+                        <td>Mail:</td>
+                        <td><input type="text" name="mail" value="<%= mydata.mail %>"></td>
+                </tr>
+                <tr>
+                        <td>Age:</td>
+                        <td><input type="text" name="age" value="<%= mydata.age %>"></td>
+                </tr>
+                <tr>
+                        <td></td>
+                        <td><input type="submit"></td>
+                </tr>
+        </table>
+</form>
+

@@ -1,0 +1,7 @@
+ [<a href="/mydata/">戻る</a>]
+<p><%= msg %></p>
+<p>削除するデータ：<%= mydata.name %>[<%= mydata.mail %>](<%= mydata.age %>)</p>
+<form action="/mydata/destroy" method="post">
+        <input type="hidden" name="id" value="<%= mydata.id %>">
+        <input type="submit">
+</form>

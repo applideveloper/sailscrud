@@ -1,0 +1,25 @@
+ [<a href="/mydata/">戻る</a>]
+<p><%= msg %></p>
+<form action="/mydata/create" method="post">
+<table>
+        <tr>
+                <td>Name:</td>
+                <td><input type="text" name="name" value="<%= name %>"><br>
+                <span class="err"><%= err.name ? err.name[0].message : '' %></span></td>
+        </tr>
+        <tr>
+                <td>Mail:</td>
+                <td><input type="text" name="mail" value="<%= mail %>"><br>
+                <span class="err"><%= err.mail ? err.mail[0].message : '' %></span></td>
+        </tr>
+        <tr>
+                <td>Age:</td>
+                <td><input type="text" name="age" value="<%= age %>"><br>
+                <span class="err"><%= err.age ? err.age[0].message : '' %></span></td>
+        </tr>
+        <tr>
+                <td></td>
+                <td><input type="submit"></td>
+        </tr>
+</table>
+</form>

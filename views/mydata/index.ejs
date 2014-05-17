@@ -1,0 +1,11 @@
+ [<a href="/mydata/add">追加</a>]
+ [<a href="/mydata/find">検索</a>]
+<p><%= msg %></p>
+<ol>
+<% for(var i = 0;i < datas.length;i++){ %>
+<li><%= datas[i].name + '[' + datas[i].mail + ']' +  '(' + datas[i].age + ')' %>
+ [<a href="/mydata/edit?id=<%= datas[i].id %>">edit</a>]
+ [<a href="/mydata/del?id=<%= datas[i].id %>">delete</a>]</li>
+<% } %>
+</ol>
+
