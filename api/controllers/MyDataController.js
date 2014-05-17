@@ -20,7 +20,7 @@ module.exports = {
         index : function(req, res) {
                 MyData.find().done(function(err, mydatas) {
                         return res.view({
-                                title : 'Index Page',
+                                title : 'Sails.jsでCRUDアプリケーション',
                                 msg : 'MyDataの一覧リスト',
                                 datas : mydatas
                         });
@@ -34,7 +34,7 @@ module.exports = {
 //                });
 
           return res.view({
-                  title : 'Add Page',
+                  title : 'Sails.jsでCRUDアプリケーション',
                   msg : 'MyDataの新規作成',
                   name : '',
                   mail : '',
@@ -64,7 +64,7 @@ module.exports = {
                         if (err){
                                 if (err.ValidationError){
                                 return res.view('mydata/add',{
-                                        title : 'Add Page',
+                                        title : 'Sails.jsでCRUDアプリケーション',
                                         msg : '入力に問題があります。',
                                         name : req.body.name,
                                         mail : req.body.mail,
@@ -85,7 +85,7 @@ module.exports = {
                 MyData.findOne(req.query.id).done(function(err, mydata) {
                         if (err == undefined) {
                                 return res.view({
-                                        title : 'Edit Page',
+                                        title : 'Sails.jsでCRUDアプリケーション',
                                         msg : 'MyDataの更新',
                                         mydata : mydata
                                 });
@@ -111,7 +111,7 @@ module.exports = {
                 MyData.findOne(req.query.id).done(function(err, mydata) {
                         if (err == undefined) {
                                 return res.view({
-                                        title : 'Delete Page',
+                                        title : 'Sails.jsでCRUDアプリケーション',
                                         msg : 'MyDataの削除',
                                         mydata : mydata
                                 });
@@ -183,7 +183,7 @@ module.exports = {
                   ]
           }).done(function(err, mydatas) {
                   return res.view({
-                          title : 'Find Page',
+                          title : 'Sails.jsでCRUDアプリケーション',
                           msg : msg,
                           fstr: fstr,
                           datas : mydatas
